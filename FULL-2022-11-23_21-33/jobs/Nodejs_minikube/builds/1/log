@@ -1,0 +1,20 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git init /var/lib/jenkins/workspace/Nodejs_minikube # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Finished: FAILURE

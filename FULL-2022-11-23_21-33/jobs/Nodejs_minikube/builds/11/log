@@ -1,0 +1,60 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision a201430023ca82734a20abcda3fa5faebfecb834 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a201430023ca82734a20abcda3fa5faebfecb834 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk a201430023ca82734a20abcda3fa5faebfecb834 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins8511672370691285195.sh
+Sending build context to Docker daemon  2.704MB
+Step 1/7 : FROM node:14-alpine
+ ---> a77fffa232aa
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> 88aa395197a1
+Step 3/7 : COPY package.json .
+ ---> Using cache
+ ---> fceb9c951e87
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 11863b0d2407
+Step 5/7 : COPY . .
+ ---> Using cache
+ ---> b7a28b123183
+Step 6/7 : EXPOSE 3002
+ ---> Using cache
+ ---> d0cc4c165d69
+Step 7/7 : CMD [ "node", "app.js" ]
+ ---> Using cache
+ ---> 0af59e092303
+Successfully built 0af59e092303
+Successfully tagged node_minikube:latest
+docker: Error response from daemon: Conflict. The container name "/con1" is already in use by container "25ff8335a93d64b78ef7bfd64b24ab84ba25365df4fb4e585c9dfcd2b299a2b1". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+The push refers to repository [docker.io/anildevops45/minikube]
+5a6d9bb18bea: Preparing
+6f1d840c9809: Preparing
+fe2e07318399: Preparing
+986c84e67a0b: Preparing
+b9f880913e5c: Preparing
+cbe10390d689: Preparing
+a3b7a7cac40d: Preparing
+994393dc58e7: Preparing
+cbe10390d689: Waiting
+994393dc58e7: Waiting
+a3b7a7cac40d: Waiting
+denied: requested access to the resource is denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

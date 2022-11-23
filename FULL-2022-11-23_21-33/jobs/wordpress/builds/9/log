@@ -1,0 +1,23 @@
+Started by user [8mha:////4FyQ8I2Xt9cX7IWEAFeZbPdniXNukYeDDVkV4tQW8mgTAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9xLzMHABc+DTUvwAAAA==[0mAni;
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/wordpress
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/wordpress/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/wordpress_rep0.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/wordpress_rep0.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/wordpress_rep0.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 96cad616899e0db81b14b593c3767195685d2afb (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 96cad616899e0db81b14b593c3767195685d2afb # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 96cad616899e0db81b14b593c3767195685d2afb # timeout=10
+[wordpress] $ /bin/bash /tmp/jenkins16591913121254366731.sh
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&shmsize=0&t=wp-image3&target=&ulimits=null&version=1": dial unix /var/run/docker.sock: connect: permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

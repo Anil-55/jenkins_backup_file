@@ -1,0 +1,9 @@
+commit a1482c77f127bfff7178f4bf49ae93e035d3600f
+tree fee1fad0c00d95ad97ab1b0aa2a7bde1d0ed46ab
+parent abe2b3551066e031c4c740fbf8e113d353a98938
+author Anil-55 <85402050+Anil-55@users.noreply.github.com> 2022-09-28 12:09:25 +0530
+committer GitHub <noreply@github.com> 2022-09-28 12:09:25 +0530
+
+    Create Dockerfile
+
+:000000 100644 0000000000000000000000000000000000000000 d7bbf7dc48676fa127a0955b0f0f822cebc2a1a9 A	wordpress/Dockerfile

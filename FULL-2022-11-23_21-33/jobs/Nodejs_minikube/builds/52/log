@@ -1,0 +1,83 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision ccb3086920e52fb293e9a2bbbce2d2530bd33afe (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ccb3086920e52fb293e9a2bbbce2d2530bd33afe # timeout=10
+Commit message: "Update index.html"
+ > git rev-list --no-walk ccb3086920e52fb293e9a2bbbce2d2530bd33afe # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins2016421943770184164.sh
+deleting image
+Untagged: anildevops45/minikube:2
+Untagged: anildevops45/minikube@sha256:b4a974e13ddbdca95a4c9c89aacf7cc9d8ffcf4bced10931ec4b357cd44151d7
+building image
+Sending build context to Docker daemon  2.781MB
+Step 1/8 : FROM ubuntu
+ ---> a8780b506fa4
+Step 2/8 : RUN apt-get update
+ ---> Using cache
+ ---> 99b111040907
+Step 3/8 : RUN apt-get install apache2 -y
+ ---> Using cache
+ ---> 87881d71e533
+Step 4/8 : RUN apt-get install apache2-utils -y
+ ---> Using cache
+ ---> 43acc0dfe36e
+Step 5/8 : WORKDIR /var/www/html
+ ---> Using cache
+ ---> 205b4deda1a8
+Step 6/8 : COPY index.html .
+ ---> Using cache
+ ---> 6eb28b7b0ca6
+Step 7/8 : EXPOSE 80
+ ---> Using cache
+ ---> f8476ed1050e
+Step 8/8 : CMD ["apache2ctl","-D","FOREGROUND"]
+ ---> Using cache
+ ---> 2694196b2c4e
+Successfully built 2694196b2c4e
+Successfully tagged node_minikube:latest
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/anildevops45/minikube]
+d567a7b6e147: Preparing
+63fe4a8fff75: Preparing
+c310981d448e: Preparing
+473ee70f2a4e: Preparing
+f4a670ac65b6: Preparing
+473ee70f2a4e: Layer already exists
+c310981d448e: Layer already exists
+f4a670ac65b6: Layer already exists
+63fe4a8fff75: Layer already exists
+d567a7b6e147: Layer already exists
+2: digest: sha256:b4a974e13ddbdca95a4c9c89aacf7cc9d8ffcf4bced10931ec4b357cd44151d7 size: 1367
+Switched to context "minikube".
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+2: Pulling from anildevops45/minikube
+Digest: sha256:b4a974e13ddbdca95a4c9c89aacf7cc9d8ffcf4bced10931ec4b357cd44151d7
+Status: Image is up to date for anildevops45/minikube:2
+docker.io/anildevops45/minikube:2
+pod "myanil" deleted
+pod/myanil created
+service/npserv unchanged
+Finished: SUCCESS

@@ -1,0 +1,24 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision acdf1a05d1b0246911d2913cecfd2806bd519a81 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f acdf1a05d1b0246911d2913cecfd2806bd519a81 # timeout=10
+Commit message: "Create pod.yaml"
+ > git rev-list --no-walk acdf1a05d1b0246911d2913cecfd2806bd519a81 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins15127808497788697036.sh
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

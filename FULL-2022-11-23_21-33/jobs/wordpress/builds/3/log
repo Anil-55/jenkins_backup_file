@@ -1,0 +1,129 @@
+Started by user [8mha:////4FyQ8I2Xt9cX7IWEAFeZbPdniXNukYeDDVkV4tQW8mgTAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9xLzMHABc+DTUvwAAAA==[0mAni;
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/wordpress
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/wordpress/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/wordpress_rep0.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/wordpress_rep0.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/wordpress_rep0.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision a1482c77f127bfff7178f4bf49ae93e035d3600f (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1482c77f127bfff7178f4bf49ae93e035d3600f # timeout=10
+Commit message: "Create Dockerfile"
+ > git rev-list --no-walk abe2b3551066e031c4c740fbf8e113d353a98938 # timeout=10
+[wordpress] $ /bin/bash /tmp/jenkins4101904232964270010.sh
+Sending build context to Docker daemon  64.26MB
+Step 1/2 : FROM wordpress:php8.1-apache
+php8.1-apache: Pulling from library/wordpress
+31b3f1ad4ce1: Pulling fs layer
+ad30ef427bea: Pulling fs layer
+deeb65fd0ffb: Pulling fs layer
+136a0d294b5e: Pulling fs layer
+c8d44545310e: Pulling fs layer
+f4d7b00e3206: Pulling fs layer
+c8d44545310e: Waiting
+136a0d294b5e: Waiting
+294cc749e981: Pulling fs layer
+a066a96108b0: Pulling fs layer
+294cc749e981: Waiting
+f4d7b00e3206: Waiting
+33a9e13caeff: Pulling fs layer
+33a9e13caeff: Waiting
+a066a96108b0: Waiting
+6485079b3a2c: Pulling fs layer
+68ce03203133: Pulling fs layer
+d037fdf593b3: Pulling fs layer
+4d9cc3653927: Pulling fs layer
+c3813d891905: Pulling fs layer
+6485079b3a2c: Waiting
+68ce03203133: Waiting
+4d9cc3653927: Waiting
+d037fdf593b3: Waiting
+c3813d891905: Waiting
+7558d10d756f: Pulling fs layer
+d2a2e04b4896: Pulling fs layer
+7558d10d756f: Waiting
+d2a2e04b4896: Waiting
+6a2aed05b9a6: Pulling fs layer
+5c0d90697005: Pulling fs layer
+825f4d795ec4: Pulling fs layer
+5c0d90697005: Waiting
+6a2aed05b9a6: Waiting
+62250e85892d: Pulling fs layer
+9f2057cfbc51: Pulling fs layer
+825f4d795ec4: Waiting
+9f2057cfbc51: Waiting
+ad30ef427bea: Verifying Checksum
+ad30ef427bea: Download complete
+136a0d294b5e: Download complete
+31b3f1ad4ce1: Verifying Checksum
+31b3f1ad4ce1: Download complete
+f4d7b00e3206: Verifying Checksum
+f4d7b00e3206: Download complete
+31b3f1ad4ce1: Pull complete
+ad30ef427bea: Pull complete
+294cc749e981: Verifying Checksum
+294cc749e981: Download complete
+c8d44545310e: Download complete
+33a9e13caeff: Verifying Checksum
+33a9e13caeff: Download complete
+a066a96108b0: Verifying Checksum
+a066a96108b0: Download complete
+68ce03203133: Verifying Checksum
+68ce03203133: Download complete
+deeb65fd0ffb: Verifying Checksum
+deeb65fd0ffb: Download complete
+6485079b3a2c: Verifying Checksum
+6485079b3a2c: Download complete
+deeb65fd0ffb: Pull complete
+136a0d294b5e: Pull complete
+c8d44545310e: Pull complete
+f4d7b00e3206: Pull complete
+294cc749e981: Pull complete
+a066a96108b0: Pull complete
+33a9e13caeff: Pull complete
+6485079b3a2c: Pull complete
+68ce03203133: Pull complete
+d037fdf593b3: Verifying Checksum
+d037fdf593b3: Download complete
+d037fdf593b3: Pull complete
+4d9cc3653927: Verifying Checksum
+4d9cc3653927: Download complete
+4d9cc3653927: Pull complete
+c3813d891905: Verifying Checksum
+c3813d891905: Download complete
+d2a2e04b4896: Verifying Checksum
+d2a2e04b4896: Download complete
+c3813d891905: Pull complete
+5c0d90697005: Verifying Checksum
+5c0d90697005: Download complete
+7558d10d756f: Verifying Checksum
+7558d10d756f: Download complete
+6a2aed05b9a6: Verifying Checksum
+6a2aed05b9a6: Download complete
+7558d10d756f: Pull complete
+d2a2e04b4896: Pull complete
+6a2aed05b9a6: Pull complete
+5c0d90697005: Pull complete
+62250e85892d: Verifying Checksum
+62250e85892d: Download complete
+9f2057cfbc51: Verifying Checksum
+9f2057cfbc51: Download complete
+825f4d795ec4: Download complete
+825f4d795ec4: Pull complete
+62250e85892d: Pull complete
+9f2057cfbc51: Pull complete
+Digest: sha256:b9e370c114bd2b63776d35caaf3d388ba983f0ee630507589d0d1246b612e2a6
+Status: Downloaded newer image for wordpress:php8.1-apache
+ ---> e3030a5e3fc0
+Step 2/2 : COPY . /var/www/html
+ ---> 6738aa726e03
+Successfully built 6738aa726e03
+Successfully tagged wp-image:latest
+Finished: SUCCESS

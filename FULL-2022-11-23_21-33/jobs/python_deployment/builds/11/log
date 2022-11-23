@@ -1,0 +1,44 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/python_deployment
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/python_deployment/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Python_Project_InNews.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Python_Project_InNews.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Python_Project_InNews.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision ce87e26d8d5fc521975854ea018fe671fd6ffa3a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ce87e26d8d5fc521975854ea018fe671fd6ffa3a # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 4a797faddbfe71799bd25ac8e879155e53c48fe7 # timeout=10
+[python_deployment] $ /bin/sh -xe /tmp/jenkins17571888494091096728.sh
++ docker build -t pyhthon_dep_image123 .
+Sending build context to Docker daemon  886.8kB
+Step 1/6 : FROM python:3.8-slim-buster
+ ---> 5cc94b67760d
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 564db4efc1e5
+Step 3/6 : COPY requirements.txt requirements.txt
+ ---> Using cache
+ ---> cc85b2601b32
+Step 4/6 : RUN pip3 install -r requirements.txt
+ ---> Using cache
+ ---> b55943866179
+Step 5/6 : COPY . .
+ ---> 721f68fe9d0c
+Step 6/6 : CMD ["streamlit",  "run", "App.py"]
+ ---> Running in 1a811e830ba1
+Removing intermediate container 1a811e830ba1
+ ---> 9ae9229ab214
+Successfully built 9ae9229ab214
+Successfully tagged pyhthon_dep_image123:latest
++ docker run -d --name python_con3213 -p 8501:8501 pyhthon_dep_image1
+f3a3009e64a5ad3c47a6e81eea44dc5966470736fe6e936f4f8566d67fd0d010
+Finished: SUCCESS

@@ -1,0 +1,9 @@
+commit 9e2bd33ad3e2ea55073ad0655237ab243dbedb7a
+tree 40680298defbd282526769e9725e4975cbe07f3e
+parent 595c85f923f3a1507466eefcd084f8f95b6bae57
+author Anil-55 <85402050+Anil-55@users.noreply.github.com> 2022-09-30 10:26:31 +0530
+committer GitHub <noreply@github.com> 2022-09-30 10:26:31 +0530
+
+    Update Dockerfile
+
+:100644 100644 3a1d49d2430f7ab2f0b8ffe226a4daac45493747 ef26749213095edb5281e2deaa5a39d5e1b5932a M	wordpress/Dockerfile

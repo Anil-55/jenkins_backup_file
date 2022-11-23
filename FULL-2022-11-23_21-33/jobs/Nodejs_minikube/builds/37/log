@@ -1,0 +1,83 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision addc78384467253cb8403e4800e671c6745c0f4d (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f addc78384467253cb8403e4800e671c6745c0f4d # timeout=10
+Commit message: "Update service.yaml"
+ > git rev-list --no-walk f001100cf37065136df9310c8b36ad48ae093751 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins3499286716788295714.sh
+Sending build context to Docker daemon  2.722MB
+Step 1/7 : FROM node:14-alpine
+ ---> bd318f777108
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> d0681281976d
+Step 3/7 : COPY package.json .
+ ---> Using cache
+ ---> 8df3a512fe4c
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 53dc41fafcce
+Step 5/7 : COPY . .
+ ---> 0cf41c262755
+Step 6/7 : EXPOSE 3002
+ ---> Running in 3175776550aa
+Removing intermediate container 3175776550aa
+ ---> 2ed85bf14a53
+Step 7/7 : CMD [ "node", "app.js" ]
+ ---> Running in 324759e6791e
+Removing intermediate container 324759e6791e
+ ---> e9ca6afe97fe
+Successfully built e9ca6afe97fe
+Successfully tagged node_minikube:latest
+docker: Error response from daemon: Conflict. The container name "/con1" is already in use by container "72b4e71b094a2c583bf452b22ba366623b8c763c958938073e3614170bf93467". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/anildevops45/minikube]
+00a79fbdf21b: Preparing
+35516d06298b: Preparing
+fa9faa881e62: Preparing
+075572597c79: Preparing
+5e70c4eb6a69: Preparing
+072f9fddc051: Preparing
+05a967f4b2a2: Preparing
+994393dc58e7: Preparing
+05a967f4b2a2: Waiting
+072f9fddc051: Waiting
+994393dc58e7: Waiting
+fa9faa881e62: Layer already exists
+5e70c4eb6a69: Layer already exists
+35516d06298b: Layer already exists
+075572597c79: Layer already exists
+994393dc58e7: Layer already exists
+072f9fddc051: Layer already exists
+05a967f4b2a2: Layer already exists
+00a79fbdf21b: Pushed
+1: digest: sha256:5090680c993bb91c8ab8281ffbdfe7bc2a9a27445acf3877c3df0c534a45ae8f size: 1993
+Switched to context "minikube".
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+pod/myanil unchanged
+service/npserv created
+Finished: SUCCESS

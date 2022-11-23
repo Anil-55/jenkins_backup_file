@@ -1,0 +1,16 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/job1
+Checking for pre-build
+Executing pre-build step
+Checking if email needs to be generated
+No emails were triggered.
+[job1] $ /bin/sh -xe /tmp/jenkins13922026344672022443.sh
++ echo hello
+hello
+Checking for post-build
+Performing post-build step
+Checking if email needs to be generated
+No emails were triggered.
+Finished: SUCCESS

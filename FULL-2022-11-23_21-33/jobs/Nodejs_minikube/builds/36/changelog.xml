@@ -1,0 +1,9 @@
+commit f001100cf37065136df9310c8b36ad48ae093751
+tree 2c68df6543a8896aeadb4a8f931e6ab863d1112a
+parent acdf1a05d1b0246911d2913cecfd2806bd519a81
+author Anil-55 <85402050+Anil-55@users.noreply.github.com> 2022-11-10 22:15:43 +0530
+committer GitHub <noreply@github.com> 2022-11-10 22:15:43 +0530
+
+    Update pod.yaml
+
+:100644 100644 1ee30864e793327c9253ab0bf4052cbd587e2c16 44af52b282d215793e17dad686add3ed75f9e0f7 M	pod.yaml

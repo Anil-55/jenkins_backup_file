@@ -1,0 +1,102 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision e6b59e03f712b7bd1bb445b597a30801577101c8 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e6b59e03f712b7bd1bb445b597a30801577101c8 # timeout=10
+Commit message: "Create index.html"
+ > git rev-list --no-walk addc78384467253cb8403e4800e671c6745c0f4d # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins16405976950616227263.sh
+Sending build context to Docker daemon  2.734MB
+Step 1/8 : FROM node:14-alpine
+ ---> bd318f777108
+Step 2/8 : WORKDIR /app
+ ---> Using cache
+ ---> d0681281976d
+Step 3/8 : COPY package.json .
+ ---> Using cache
+ ---> 8df3a512fe4c
+Step 4/8 : COPY index.html .
+ ---> 2a5bb344ff62
+Step 5/8 : RUN npm install
+ ---> Running in fe4fab1b831f
+[91mnpm notice[0m[91m created a lockfile as package-lock.json. You should commit this file.
+[0m[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules/chokidar/node_modules/fsevents):
+[0m[91mnpm [0m[91mWARN [0m[91mnotsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91mnpm WARN expapp@1.0.0 No description
+[0m[91mnpm WARN expapp@1.0.0 No repository field.
+[0m[91m
+[0madded 135 packages from 83 contributors and audited 136 packages in 9.306s
+
+26 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Removing intermediate container fe4fab1b831f
+ ---> 33a8bbd68063
+Step 6/8 : COPY . .
+ ---> 58d6ca42d350
+Step 7/8 : EXPOSE 3002
+ ---> Running in 22a4063de39c
+Removing intermediate container 22a4063de39c
+ ---> 12ee487f9f83
+Step 8/8 : CMD [ "node", "app.js" ]
+ ---> Running in 5dae012438a3
+Removing intermediate container 5dae012438a3
+ ---> aeb014e1fbb5
+Successfully built aeb014e1fbb5
+Successfully tagged node_minikube:latest
+docker: Error response from daemon: Conflict. The container name "/con1" is already in use by container "72b4e71b094a2c583bf452b22ba366623b8c763c958938073e3614170bf93467". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/anildevops45/minikube]
+3776027de95d: Preparing
+5aaea878154d: Preparing
+dcfde01e7581: Preparing
+fa9faa881e62: Preparing
+075572597c79: Preparing
+5e70c4eb6a69: Preparing
+072f9fddc051: Preparing
+05a967f4b2a2: Preparing
+994393dc58e7: Preparing
+5e70c4eb6a69: Waiting
+05a967f4b2a2: Waiting
+072f9fddc051: Waiting
+994393dc58e7: Waiting
+fa9faa881e62: Layer already exists
+075572597c79: Layer already exists
+5e70c4eb6a69: Layer already exists
+072f9fddc051: Layer already exists
+05a967f4b2a2: Layer already exists
+994393dc58e7: Layer already exists
+dcfde01e7581: Pushed
+3776027de95d: Pushed
+5aaea878154d: Pushed
+1: digest: sha256:bb1995e3d278fa0492224014b796d6d4dccccae763fc02654279e4e1a0d803e0 size: 2200
+Switched to context "minikube".
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+pod/myanil created
+service/npserv created
+Finished: SUCCESS

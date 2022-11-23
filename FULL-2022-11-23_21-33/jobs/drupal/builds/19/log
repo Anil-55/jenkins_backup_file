@@ -1,0 +1,25 @@
+Started by user [8mha:////4FyQ8I2Xt9cX7IWEAFeZbPdniXNukYeDDVkV4tQW8mgTAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9xLzMHABc+DTUvwAAAA==[0mAni;
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/drupal
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/drupal/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/drupal-project.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/drupal-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/drupal-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/9.x^{commit} # timeout=10
+Checking out Revision 9cc9b02b91475e8714057ae749c9788d7f3b9687 (origin/9.x)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9cc9b02b91475e8714057ae749c9788d7f3b9687 # timeout=10
+Commit message: "Create info.php"
+ > git rev-list --no-walk d93c14c59ec006f35344da7290badd301da8f996 # timeout=10
+SSH: Connecting from host [PWSLTP098]
+SSH: Connecting with configuration [drupal] ...
+SSH: EXEC: completed after 1,803 ms
+SSH: Disconnecting configuration [drupal] ...
+SSH: Transferred 0 file(s)
+Finished: SUCCESS

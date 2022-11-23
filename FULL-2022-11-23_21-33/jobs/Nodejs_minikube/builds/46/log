@@ -1,0 +1,74 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 4a1097707f1379252e1483874d2acac906e31a21 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4a1097707f1379252e1483874d2acac906e31a21 # timeout=10
+Commit message: "Update pod.yaml"
+ > git rev-list --no-walk 4a1097707f1379252e1483874d2acac906e31a21 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins9845415332299470457.sh
+Sending build context to Docker daemon   2.77MB
+Step 1/8 : FROM ubuntu
+ ---> a8780b506fa4
+Step 2/8 : RUN apt-get update
+ ---> Using cache
+ ---> 99b111040907
+Step 3/8 : RUN apt-get install apache2 -y
+ ---> Using cache
+ ---> 87881d71e533
+Step 4/8 : RUN apt-get install apache2-utils -y
+ ---> Using cache
+ ---> 43acc0dfe36e
+Step 5/8 : WORKDIR /var/www/html
+ ---> Using cache
+ ---> 205b4deda1a8
+Step 6/8 : COPY index.html .
+ ---> Using cache
+ ---> 15b5be32d36b
+Step 7/8 : EXPOSE 80
+ ---> Using cache
+ ---> 105116c496e2
+Step 8/8 : CMD ["apache2ctl","-D","FOREGROUND"]
+ ---> Using cache
+ ---> fb67f4db42c1
+Successfully built fb67f4db42c1
+Successfully tagged node_minikube:latest
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/anildevops45/minikube]
+7348ee2245b3: Preparing
+63fe4a8fff75: Preparing
+c310981d448e: Preparing
+473ee70f2a4e: Preparing
+f4a670ac65b6: Preparing
+63fe4a8fff75: Layer already exists
+f4a670ac65b6: Layer already exists
+7348ee2245b3: Layer already exists
+c310981d448e: Layer already exists
+473ee70f2a4e: Layer already exists
+2: digest: sha256:c5427eab7407a74ea04db9c7869395db8c9de568807dffa8b38b1ddd2ae578b2 size: 1367
+Switched to context "minikube".
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+pod/myanil created
+service/npserv created
+Finished: SUCCESS

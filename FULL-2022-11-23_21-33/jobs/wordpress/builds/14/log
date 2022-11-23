@@ -1,0 +1,29 @@
+Started by user [8mha:////4FyQ8I2Xt9cX7IWEAFeZbPdniXNukYeDDVkV4tQW8mgTAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9xLzMHABc+DTUvwAAAA==[0mAni;
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/wordpress
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/wordpress/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/wordpress_rep0.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/wordpress_rep0.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/wordpress_rep0.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision ce24c6bcacb805fde2ba2cbe5318027c48dc635f (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ce24c6bcacb805fde2ba2cbe5318027c48dc635f # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 31746db71a9ef1a161cd5198f11eae42e63d1f19 # timeout=10
+[wordpress] $ /bin/bash /tmp/jenkins12996720656931282939.sh
+Sending build context to Docker daemon  64.26MB
+Step 1/4 : FROM  php:7.4-apache
+ ---> 591ebfe75822
+Step 2/4 : RUN yum update -y
+ ---> Running in e9154a4505b7
+[91m/bin/sh: 1: yum: not found
+[0mThe command '/bin/sh -c yum update -y' returned a non-zero code: 127
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

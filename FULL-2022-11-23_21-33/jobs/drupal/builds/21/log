@@ -1,0 +1,31 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/drupal
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/drupal/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/drupal-project.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/drupal-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/drupal-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/9.x^{commit} # timeout=10
+Checking out Revision af48682e66ffc74c393a85c18791552a8506d152 (origin/9.x)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f af48682e66ffc74c393a85c18791552a8506d152 # timeout=10
+Commit message: "Update composer.json"
+ > git rev-list --no-walk af48682e66ffc74c393a85c18791552a8506d152 # timeout=10
+Checking for pre-build
+Executing pre-build step
+Checking if email needs to be generated
+No emails were triggered.
+SSH: Connecting from host [PWSLTP098]
+SSH: Connecting with configuration [drupal] ...
+ERROR: Exception when publishing, exception message [Failed to connect and initialize SSH connection. Message: [Failed to connect session for config [drupal]. Message [java.net.ConnectException: Connection timed out (Connection timed out)]]]
+Checking for post-build
+Performing post-build step
+Checking if email needs to be generated
+No emails were triggered.
+Finished: UNSTABLE

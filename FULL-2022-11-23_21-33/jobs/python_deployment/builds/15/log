@@ -1,0 +1,55 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/python_deployment
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/python_deployment/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Python_Project_InNews.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Python_Project_InNews.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Python_Project_InNews.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 34b9dca7795342247a696e09a57d0c9bbd9c5ff5 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 34b9dca7795342247a696e09a57d0c9bbd9c5ff5 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 34b9dca7795342247a696e09a57d0c9bbd9c5ff5 # timeout=10
+[python_deployment] $ /bin/sh -xe /tmp/jenkins7738430013460964486.sh
++ echo removing image
+removing image
++ docker stop python_con321113
+python_con321113
++ docker rm python_con321113
+python_con321113
++ docker rmi pyhthon_anil_image451
+Untagged: pyhthon_anil_image451:latest
+Deleted: sha256:1f35c097e41d20d22b7986127963ee4a41dd374336f53d1d20eba9f899d7b094
+Deleted: sha256:2819c0f64e11af9ec55a5eb0ddc62987404caea4ac34691003ddda8012a883fd
+Deleted: sha256:a7322aaa970c127ff21b0c0d6572cd465623bdb92089f4a5e168862236db0685
++ docker build -t pyhthon_anil_image451 .
+Sending build context to Docker daemon  892.4kB
+Step 1/6 : FROM python:3.8-slim-buster
+ ---> 5cc94b67760d
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 564db4efc1e5
+Step 3/6 : COPY requirements.txt requirements.txt
+ ---> Using cache
+ ---> cc85b2601b32
+Step 4/6 : RUN pip3 install -r requirements.txt
+ ---> Using cache
+ ---> b55943866179
+Step 5/6 : COPY . .
+ ---> d95b315a14a0
+Step 6/6 : CMD ["streamlit",  "run", "App.py"]
+ ---> Running in 2cc6690fb3a3
+Removing intermediate container 2cc6690fb3a3
+ ---> d047f06415a3
+Successfully built d047f06415a3
+Successfully tagged pyhthon_anil_image451:latest
++ docker run -d --name python_con321113 -p 8501:8501 pyhthon_anil_image451
+801c5924ed03db955621958d6759d43ee6a90d471d689044f551f201116f3c26
+Finished: SUCCESS

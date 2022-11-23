@@ -1,0 +1,79 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision a201430023ca82734a20abcda3fa5faebfecb834 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a201430023ca82734a20abcda3fa5faebfecb834 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk d72f1726f591059d99153e9fd7f4a4bb796b6d7c # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins6093685636281882765.sh
+Sending build context to Docker daemon  2.704MB
+Step 1/7 : FROM node:14-alpine
+14-alpine: Pulling from library/node
+213ec9aee27d: Pulling fs layer
+abd06399d030: Pulling fs layer
+553359b95fe0: Pulling fs layer
+3d1c922b6f32: Pulling fs layer
+3d1c922b6f32: Waiting
+553359b95fe0: Verifying Checksum
+553359b95fe0: Download complete
+213ec9aee27d: Verifying Checksum
+213ec9aee27d: Download complete
+213ec9aee27d: Pull complete
+3d1c922b6f32: Verifying Checksum
+3d1c922b6f32: Download complete
+abd06399d030: Verifying Checksum
+abd06399d030: Download complete
+abd06399d030: Pull complete
+553359b95fe0: Pull complete
+3d1c922b6f32: Pull complete
+Digest: sha256:673f1dc6309e996c308032ad0e86c3270a76767c54e1bb8d23e45a84361a8245
+Status: Downloaded newer image for node:14-alpine
+ ---> a77fffa232aa
+Step 2/7 : WORKDIR /app
+ ---> Running in b6d6768ac0ac
+Removing intermediate container b6d6768ac0ac
+ ---> 67caeb1e32eb
+Step 3/7 : COPY package.json .
+ ---> bcd7add99d90
+Step 4/7 : RUN npm install
+ ---> Running in 5190094d11f9
+[91mnpm notice created a lockfile as package-lock.json. You should commit this file.
+[0m[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules/chokidar/node_modules/fsevents):
+npm [0m[91mWARN notsup[0m[91m SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91mnpm WARN expapp@1.0.0 No description
+[0m[91mnpm WARN expapp@1.0.0 No repository field.
+[0m[91m
+[0madded 135 packages from 83 contributors and audited 136 packages in 4.678s
+
+26 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Removing intermediate container 5190094d11f9
+ ---> 00a83f83cd83
+Step 5/7 : COPY . .
+ ---> 887b3f23e3e7
+Step 6/7 : EXPOSE 3002
+ ---> Running in 20d24e7024e9
+Removing intermediate container 20d24e7024e9
+ ---> 501788d01b8c
+Step 7/7 : CMD [ "node", "app.js" ]
+ ---> Running in 5d9ed52bf70e
+Removing intermediate container 5d9ed52bf70e
+ ---> a6a06a8a55fe
+Successfully built a6a06a8a55fe
+Successfully tagged node_minikube:latest
+Finished: SUCCESS

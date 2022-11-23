@@ -1,0 +1,72 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/nodejs_sample_repo.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/nodejs_sample_repo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/nodejs_sample_repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 9aca132458572086faab8f8600643015dc163343 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9aca132458572086faab8f8600643015dc163343 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 9aca132458572086faab8f8600643015dc163343 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins14718871320529660455.sh
+Sending build context to Docker daemon  2.494MB
+Step 1/6 : FROM node:9-slim
+9-slim: Pulling from library/node
+5bba3ecb4cd6: Pulling fs layer
+196b8e3c919d: Pulling fs layer
+7d083412657b: Pulling fs layer
+a88538b9cd05: Pulling fs layer
+e01bd28a434b: Pulling fs layer
+e01bd28a434b: Waiting
+a88538b9cd05: Waiting
+7d083412657b: Verifying Checksum
+7d083412657b: Download complete
+196b8e3c919d: Verifying Checksum
+196b8e3c919d: Download complete
+e01bd28a434b: Verifying Checksum
+e01bd28a434b: Download complete
+5bba3ecb4cd6: Verifying Checksum
+5bba3ecb4cd6: Download complete
+5bba3ecb4cd6: Pull complete
+196b8e3c919d: Pull complete
+7d083412657b: Pull complete
+a88538b9cd05: Download complete
+a88538b9cd05: Pull complete
+e01bd28a434b: Pull complete
+Digest: sha256:288b29c1925d65b2d7d8701f8ada201e7dcd066438c0fb4299c35dff129b893f
+Status: Downloaded newer image for node:9-slim
+ ---> e20bb4abe4ee
+Step 2/6 : WORKDIR /app
+ ---> Running in 2d87b0bb6318
+Removing intermediate container 2d87b0bb6318
+ ---> bd098256f7aa
+Step 3/6 : COPY package*.json ./
+ ---> f6c5f3a0cf45
+Step 4/6 : RUN npm install
+ ---> Running in fdf27bb44f72
+[91mnpm notice created a lockfile as package-lock.json. You should commit this file.
+[0m[91mnpm WARN simple-nodejs-docker@1.0.0 No description
+[0m[91mnpm WARN simple-nodejs-docker@1.0.0 No repository field.
+npm [0m[91mWARN[0m[91m simple-nodejs-docker@1.0.0 No license field.
+[0m[91m
+[0madded 57 packages in 3.488s
+Removing intermediate container fdf27bb44f72
+ ---> 41b1e46d108e
+Step 5/6 : COPY . .
+ ---> a0ab321ae860
+Step 6/6 : CMD ["npm", "start"]
+ ---> Running in 3832c292191c
+Removing intermediate container 3832c292191c
+ ---> c4515eb06290
+Successfully built c4515eb06290
+Successfully tagged imagename:latest
+Finished: SUCCESS

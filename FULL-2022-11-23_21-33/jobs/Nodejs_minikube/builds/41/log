@@ -1,0 +1,90 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 95523e531051a14c6ed0114fd1f719383af5ed01 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 95523e531051a14c6ed0114fd1f719383af5ed01 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 88ade106792161d401e85b4ef4da93b576572ab2 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins1344486760797859164.sh
+Sending build context to Docker daemon  2.745MB
+Step 1/6 : FROM node
+ ---> cb9aad9080ca
+Step 2/6 : WORKDIR /var/www/html
+ ---> Running in 79a0f299be56
+Removing intermediate container 79a0f299be56
+ ---> adf2ddaf7416
+Step 3/6 : COPY index.html .
+ ---> 27a67a22f474
+Step 4/6 : COPY . .
+ ---> 3294decadcfe
+Step 5/6 : EXPOSE 80
+ ---> Running in 75ee97a0b3df
+Removing intermediate container 75ee97a0b3df
+ ---> bed7c5eab007
+Step 6/6 : CMD [ "node", "app.js" ]
+ ---> Running in a6327cf1927a
+Removing intermediate container a6327cf1927a
+ ---> a2553b366b5f
+Successfully built a2553b366b5f
+Successfully tagged node_minikube:latest
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/anildevops45/minikube]
+231dc6f2eeac: Preparing
+87bdf048d11f: Preparing
+d46e5e90b443: Preparing
+aae1fab7b8e1: Preparing
+25478c00b6e8: Preparing
+61cf42256970: Preparing
+f1479df99400: Preparing
+882fd36bfd35: Preparing
+d1dec9917839: Preparing
+d38adf39e1dd: Preparing
+4ed121b04368: Preparing
+d9d07d703dd5: Preparing
+61cf42256970: Waiting
+d38adf39e1dd: Waiting
+4ed121b04368: Waiting
+f1479df99400: Waiting
+d9d07d703dd5: Waiting
+882fd36bfd35: Waiting
+d1dec9917839: Waiting
+aae1fab7b8e1: Layer already exists
+25478c00b6e8: Layer already exists
+61cf42256970: Layer already exists
+f1479df99400: Layer already exists
+882fd36bfd35: Layer already exists
+d1dec9917839: Layer already exists
+4ed121b04368: Layer already exists
+d38adf39e1dd: Layer already exists
+d9d07d703dd5: Layer already exists
+87bdf048d11f: Pushed
+d46e5e90b443: Pushed
+231dc6f2eeac: Pushed
+1: digest: sha256:1ad9311b616aa1e5140f043d40c178b5b92a3acbb824660f11c22112fe927612 size: 2840
+Switched to context "minikube".
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+pod/myanil unchanged
+service/npserv unchanged
+Finished: SUCCESS

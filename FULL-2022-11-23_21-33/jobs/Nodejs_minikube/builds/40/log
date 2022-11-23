@@ -1,0 +1,100 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 88ade106792161d401e85b4ef4da93b576572ab2 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 88ade106792161d401e85b4ef4da93b576572ab2 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 88ade106792161d401e85b4ef4da93b576572ab2 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins16269459932520812948.sh
+Sending build context to Docker daemon  2.739MB
+Step 1/8 : FROM node
+ ---> cb9aad9080ca
+Step 2/8 : WORKDIR /app
+ ---> Using cache
+ ---> ce92f56b0733
+Step 3/8 : COPY package.json .
+ ---> Using cache
+ ---> 23cb752b11ad
+Step 4/8 : COPY index.html .
+ ---> Using cache
+ ---> 988f0a176728
+Step 5/8 : RUN npm install
+ ---> Using cache
+ ---> fe0d6a63ef16
+Step 6/8 : COPY . .
+ ---> Using cache
+ ---> 735137339036
+Step 7/8 : EXPOSE 3002
+ ---> Using cache
+ ---> ec16e20da5c6
+Step 8/8 : CMD [ "node", "app.js" ]
+ ---> Using cache
+ ---> 76f4a88956eb
+Successfully built 76f4a88956eb
+Successfully tagged node_minikube:latest
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/anildevops45/minikube]
+bfa8034c3425: Preparing
+eca45be855e9: Preparing
+d0fc647e1c3b: Preparing
+36960e4bb1b7: Preparing
+22a9a3151905: Preparing
+aae1fab7b8e1: Preparing
+25478c00b6e8: Preparing
+61cf42256970: Preparing
+f1479df99400: Preparing
+882fd36bfd35: Preparing
+d1dec9917839: Preparing
+d38adf39e1dd: Preparing
+4ed121b04368: Preparing
+d9d07d703dd5: Preparing
+61cf42256970: Waiting
+f1479df99400: Waiting
+882fd36bfd35: Waiting
+d1dec9917839: Waiting
+d38adf39e1dd: Waiting
+4ed121b04368: Waiting
+d9d07d703dd5: Waiting
+aae1fab7b8e1: Waiting
+22a9a3151905: Layer already exists
+bfa8034c3425: Layer already exists
+d0fc647e1c3b: Layer already exists
+eca45be855e9: Layer already exists
+36960e4bb1b7: Layer already exists
+aae1fab7b8e1: Layer already exists
+61cf42256970: Layer already exists
+f1479df99400: Layer already exists
+25478c00b6e8: Layer already exists
+882fd36bfd35: Layer already exists
+d1dec9917839: Layer already exists
+d38adf39e1dd: Layer already exists
+4ed121b04368: Layer already exists
+d9d07d703dd5: Layer already exists
+1: digest: sha256:ae87f06f874e9cbf7ae4802dcedd3e3e92247a880a0812a21ed5da7d6ff8bee7 size: 3257
+Switched to context "minikube".
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+pod/myanil unchanged
+service/npserv unchanged
+Finished: SUCCESS

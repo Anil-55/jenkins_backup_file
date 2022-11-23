@@ -1,0 +1,56 @@
+Started by user [8mha:////4FyQ8I2Xt9cX7IWEAFeZbPdniXNukYeDDVkV4tQW8mgTAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/dLi1CL9xLzMHABc+DTUvwAAAA==[0mAni;
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/wordpress
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/wordpress/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/wordpress_rep0.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/wordpress_rep0.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/wordpress_rep0.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 35888c580b0d8109d1a55393ed9d51ab6246f5ea (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 35888c580b0d8109d1a55393ed9d51ab6246f5ea # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 35888c580b0d8109d1a55393ed9d51ab6246f5ea # timeout=10
+[wordpress] $ /bin/bash /tmp/jenkins5263101309590475018.sh
+Sending build context to Docker daemon  64.26MB
+Step 1/11 : FROM  ubuntu
+ ---> 2dc39ba059dc
+Step 2/11 : ARG DEBIAN_FRONTEND=noninteractive
+ ---> Using cache
+ ---> 33f66beb02a5
+Step 3/11 : RUN apt-get update && apt-get install -y tzdata
+ ---> Using cache
+ ---> 4a6581291989
+Step 4/11 : RUN  apt update -y
+ ---> Using cache
+ ---> 67856db80da0
+Step 5/11 : RUN  apt install apache2 -y
+ ---> Using cache
+ ---> 67292ee14fe0
+Step 6/11 : RUN  apt install php8.1 -y
+ ---> Using cache
+ ---> e27a04101c04
+Step 7/11 : RUN  apt install libapache2-mod-php8.1  -y
+ ---> Using cache
+ ---> efb741a3b5af
+Step 8/11 : RUN  apt  install php8.1-mysqli  -y
+ ---> Using cache
+ ---> f9a49e5c391f
+Step 9/11 : COPY . /var/www/html
+ ---> Using cache
+ ---> 222f86354050
+Step 10/11 : EXPOSE  80
+ ---> Using cache
+ ---> 1227a66a08d4
+Step 11/11 : CMD ["apache2ctl", "-D","FOREGROUND"]
+ ---> Using cache
+ ---> 88c584e58358
+Successfully built 88c584e58358
+Successfully tagged wp-image8:latest
+Finished: SUCCESS

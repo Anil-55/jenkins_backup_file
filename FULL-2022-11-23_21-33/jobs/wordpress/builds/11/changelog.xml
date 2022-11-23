@@ -1,0 +1,9 @@
+commit c1ba6d285809a36343857a39371f3c07a133aac3
+tree 1b5b0b1402841607f51a72b67ac3f0e6e7ac7ba3
+parent 96cad616899e0db81b14b593c3767195685d2afb
+author Anil-55 <85402050+Anil-55@users.noreply.github.com> 2022-09-29 15:25:37 +0530
+committer GitHub <noreply@github.com> 2022-09-29 15:25:37 +0530
+
+    Update wp-config.php
+
+:100644 100644 6c595ba30a442c01d26d38f62f01eb76d0a8cdd2 7679f1b9662c0fc4879d67aaebc4034b826f3cb1 M	wordpress/wp-config.php

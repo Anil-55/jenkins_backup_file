@@ -1,0 +1,159 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 88ade106792161d401e85b4ef4da93b576572ab2 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 88ade106792161d401e85b4ef4da93b576572ab2 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk e6b59e03f712b7bd1bb445b597a30801577101c8 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins15347148003999966927.sh
+Sending build context to Docker daemon  2.739MB
+Step 1/8 : FROM node
+latest: Pulling from library/node
+17c9e6141fdb: Pulling fs layer
+de4a4c6caea8: Pulling fs layer
+4edced8587e6: Pulling fs layer
+a7969cffbf46: Pulling fs layer
+74fbfde6af91: Pulling fs layer
+babbacf2d498: Pulling fs layer
+bd2943500448: Pulling fs layer
+98eaae01c196: Pulling fs layer
+61339482de65: Pulling fs layer
+babbacf2d498: Waiting
+bd2943500448: Waiting
+98eaae01c196: Waiting
+61339482de65: Waiting
+a7969cffbf46: Waiting
+de4a4c6caea8: Verifying Checksum
+de4a4c6caea8: Download complete
+4edced8587e6: Verifying Checksum
+4edced8587e6: Download complete
+17c9e6141fdb: Verifying Checksum
+17c9e6141fdb: Download complete
+babbacf2d498: Download complete
+17c9e6141fdb: Pull complete
+de4a4c6caea8: Pull complete
+4edced8587e6: Pull complete
+a7969cffbf46: Verifying Checksum
+a7969cffbf46: Download complete
+a7969cffbf46: Pull complete
+98eaae01c196: Verifying Checksum
+98eaae01c196: Download complete
+61339482de65: Verifying Checksum
+61339482de65: Download complete
+bd2943500448: Verifying Checksum
+bd2943500448: Download complete
+74fbfde6af91: Verifying Checksum
+74fbfde6af91: Download complete
+74fbfde6af91: Pull complete
+babbacf2d498: Pull complete
+bd2943500448: Pull complete
+98eaae01c196: Pull complete
+61339482de65: Pull complete
+Digest: sha256:6da4e30e3952e460fe4ad256e46a8b79acce46dd596bbe4ef882d5ec0d1ef6cb
+Status: Downloaded newer image for node:latest
+ ---> cb9aad9080ca
+Step 2/8 : WORKDIR /app
+ ---> Running in 322354fb7bff
+Removing intermediate container 322354fb7bff
+ ---> ce92f56b0733
+Step 3/8 : COPY package.json .
+ ---> 23cb752b11ad
+Step 4/8 : COPY index.html .
+ ---> 988f0a176728
+Step 5/8 : RUN npm install
+ ---> Running in a4b72a170e46
+
+added 135 packages, and audited 136 packages in 32s
+
+26 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[91mnpm notice[0m[91m 
+npm notice New major version of npm available! 8.19.2 -> 9.1.1
+npm notice Changelog: <https://github.com/npm/cli/releases/tag/v9.1.1>
+npm[0m[91m notice Run `npm install -g npm@9.1.1` to update!
+npm [0m[91mnotice[0m[91m 
+[0mRemoving intermediate container a4b72a170e46
+ ---> fe0d6a63ef16
+Step 6/8 : COPY . .
+ ---> 735137339036
+Step 7/8 : EXPOSE 3002
+ ---> Running in 492d6f79b363
+Removing intermediate container 492d6f79b363
+ ---> ec16e20da5c6
+Step 8/8 : CMD [ "node", "app.js" ]
+ ---> Running in 2b00984d126e
+Removing intermediate container 2b00984d126e
+ ---> 76f4a88956eb
+Successfully built 76f4a88956eb
+Successfully tagged node_minikube:latest
+docker: Error response from daemon: Conflict. The container name "/con1" is already in use by container "72b4e71b094a2c583bf452b22ba366623b8c763c958938073e3614170bf93467". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/anildevops45/minikube]
+bfa8034c3425: Preparing
+eca45be855e9: Preparing
+d0fc647e1c3b: Preparing
+36960e4bb1b7: Preparing
+22a9a3151905: Preparing
+aae1fab7b8e1: Preparing
+25478c00b6e8: Preparing
+aae1fab7b8e1: Waiting
+61cf42256970: Preparing
+f1479df99400: Preparing
+25478c00b6e8: Waiting
+61cf42256970: Waiting
+882fd36bfd35: Preparing
+f1479df99400: Waiting
+d1dec9917839: Preparing
+882fd36bfd35: Waiting
+d38adf39e1dd: Preparing
+4ed121b04368: Preparing
+d9d07d703dd5: Preparing
+d1dec9917839: Waiting
+d38adf39e1dd: Waiting
+4ed121b04368: Waiting
+d9d07d703dd5: Waiting
+22a9a3151905: Pushed
+d0fc647e1c3b: Pushed
+36960e4bb1b7: Pushed
+25478c00b6e8: Mounted from library/node
+eca45be855e9: Pushed
+aae1fab7b8e1: Mounted from library/node
+bfa8034c3425: Pushed
+61cf42256970: Mounted from library/node
+f1479df99400: Mounted from library/node
+882fd36bfd35: Mounted from library/node
+d1dec9917839: Mounted from library/node
+d38adf39e1dd: Mounted from library/node
+4ed121b04368: Mounted from library/node
+d9d07d703dd5: Mounted from library/node
+1: digest: sha256:ae87f06f874e9cbf7ae4802dcedd3e3e92247a880a0812a21ed5da7d6ff8bee7 size: 3257
+Switched to context "minikube".
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+pod/myanil unchanged
+service/npserv unchanged
+Finished: SUCCESS

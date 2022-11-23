@@ -1,0 +1,46 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/python_deployment
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/python_deployment/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Python_Project_InNews.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Python_Project_InNews.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Python_Project_InNews.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 4a797faddbfe71799bd25ac8e879155e53c48fe7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4a797faddbfe71799bd25ac8e879155e53c48fe7 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 4a797faddbfe71799bd25ac8e879155e53c48fe7 # timeout=10
+[python_deployment] $ /bin/sh -xe /tmp/jenkins10966939314735292155.sh
++ docker build -t pyhthon_dep_image .
+Sending build context to Docker daemon  881.2kB
+Step 1/6 : FROM python:3.8-slim-buster
+ ---> 5cc94b67760d
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 564db4efc1e5
+Step 3/6 : COPY requirements.txt requirements.txt
+ ---> Using cache
+ ---> cc85b2601b32
+Step 4/6 : RUN pip3 install -r requirements.txt
+ ---> Using cache
+ ---> b55943866179
+Step 5/6 : COPY . .
+ ---> Using cache
+ ---> f8947b9a5bf7
+Step 6/6 : CMD [  "nohup", "python3", "-m", "streamlit" "run" ]
+ ---> Using cache
+ ---> b6309390a8fa
+Successfully built b6309390a8fa
+Successfully tagged pyhthon_dep_image:latest
++ docker run -d --name python_con -p 8051:8051 pyhthon_dep_image
+docker: Error response from daemon: Conflict. The container name "/python_con" is already in use by container "822b8b6bc18db83c0b2b1d397d806ba186ad02d711f1544bb84f0d5265ee0b47". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

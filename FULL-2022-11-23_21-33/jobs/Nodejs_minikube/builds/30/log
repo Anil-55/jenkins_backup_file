@@ -1,0 +1,41 @@
+Started by user [8mha:////4PkKu1rwtHFrnr3NNJEzqJWJ3SYQEijft7iB9RhaxAvgAAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYu/dLi1CL9xLzMHAAcB2J6vwAAAA==[0mAnil-Masapeta
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/Nodejs_minikube
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Nodejs_minikube/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Anil-55/Simple-Node-App_minikube.git # timeout=10
+Fetching upstream changes from https://github.com/Anil-55/Simple-Node-App_minikube.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Anil-55/Simple-Node-App_minikube.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision acdf1a05d1b0246911d2913cecfd2806bd519a81 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f acdf1a05d1b0246911d2913cecfd2806bd519a81 # timeout=10
+Commit message: "Create pod.yaml"
+ > git rev-list --no-walk acdf1a05d1b0246911d2913cecfd2806bd519a81 # timeout=10
+[Nodejs_minikube] $ /bin/bash /tmp/jenkins15705799817510378191.sh
+* minikube v1.27.1 on Ubuntu 22.04
+! Kubernetes 1.25.0 has a known issue with resolv.conf. minikube is using a workaround that should work for most use cases.
+! For more information, see: https://github.com/kubernetes/kubernetes/issues/112135
+* Kubernetes 1.25.2 is now available. If you would like to upgrade, specify: --kubernetes-version=v1.25.2
+* Using the docker driver based on existing profile
+* Starting control plane node minikube in cluster minikube
+* Pulling base image ...
+* Updating the running docker "minikube" container ...
+! StartHost failed, but will try again: provision: Temporary Error: NewSession: new client: new client: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
+* Updating the running docker "minikube" container ...
+* Failed to start docker container. Running "minikube delete" may fix it: provision: Temporary Error: NewSession: new client: new client: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
+
+X Exiting due to IF_SSH_AUTH: Failed to start host: provision: Temporary Error: NewSession: new client: new client: ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
+* Suggestion: Your host is failing to route packets to the minikube VM. If you have VPN software, try turning it off or configuring it so that it does not re-route traffic to the VM IP. If not, check your VM environment routing options.
+* Documentation: https://minikube.sigs.k8s.io/docs/handbook/vpn_and_proxy/
+* Related issue: https://github.com/kubernetes/minikube/issues/3930
+
+Switched to context "jenkins-context".
+Unable to connect to the server: dial tcp 192.168.58.2:8443: connect: no route to host
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

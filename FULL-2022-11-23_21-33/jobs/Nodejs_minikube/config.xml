@@ -1,0 +1,62 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.12.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/Anil-55/Simple-Node-App_minikube.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/main</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="empty-list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+#docker rmi -f $(docker images -aq)
+#to delete all images
+#docker rm -vf $(docker ps -aq)
+#to delete all conatiner
+echo &quot;deleting image&quot;
+docker rmi anildevops45/minikube:2
+echo &quot;building image&quot;
+docker build -t  minikube_node .
+#docker run -d --name con1 -p 80:3002 node_minikube 
+#tag image
+docker image tag minikube_node:latest anildevops45/minikube:3
+#For pushing image 
+docker login  -u anildevops45  -p TS03ej5390
+docker push anildevops45/minikube:3
+kubectl config use-context minikube
+docker login  -u anildevops45  -p TS03ej5390
+docker pull anildevops45/minikube:3
+kubectl delete -f pod.yaml
+kubectl apply -f pod.yaml
+#kubectl delete -f service.yaml
+kubectl apply -f service.yaml
+
+
+
+</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
